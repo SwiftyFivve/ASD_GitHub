@@ -1,10 +1,238 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Rev-Auto</title>
-</head>
 
-<body>
-</body>
+	<!-- Rev-Auto -->
+    
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+        <title>Rev-Auto</title>
+        
+        <!-- Search Tools -->
+        <meta name="description" content = "Rev-Auto in Clear Lake, IA"  />
+        <meta name="keywords" content="Clear Lake, Used Cars, Rev-Auto" />
+        <meta name="robots" content="noindex,nofollow" />
+        
+        <!--  Mobile viewport  -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- StyleSheets -->
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="libs/jquery.mobile-1.3.2.css" />
+	</head>
+    
+
+	<body>
+    
+    
+    
+    <!--Home-->
+    	<div data-role="page" id="home" data-add-back-btn="true">
+    
+		<div data-role="header" data-position="fixed">
+            <h1>Home</h1>
+    	</div>
+        
+            <div data-role="content">
+            
+        <!-- Links -->
+        <p><a href="#login" data-transition="slide">Login</a> | <a href="#register" data-transition="slide">Register</a></p>
+    
+    	<!-- Feature -->
+       <a href="#feature" data-ajax="false">
+<img border="0" src="images/feature.jpg" height="170px" ></a>
+
+	<p>Rev-Auto in Clear Lake, IA</p>
+	</div>
+
+    <ul data-role="listview" data-filter="true" data-filter-placeholder="Search" data-theme="a">
+    </ul>
+    
+    <p>Rev-Auto's top goal is to find a car that is perfect for your life style. Whether your life consist of traveling for business, getting the family around or if it's your first car, we have the perfect fit for you! Come on in today!</p>
+
+
+<!-- Footer -->
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+	<div data-role="navbar">
+		<ul>
+			<li>
+			<a href="#login" data-transition="slide">Login</a>
+            </li>
+            <li>
+            <a href="#about" data-transition="slide">About</a>
+            </li>
+            <li>
+            <a href="#contact" data-transition="slide">Contact</a>
+            </li>
+        </ul>
+   </div>
+</div>
+
+</div>
+
+	<!--Register-->
+    	<div data-role="page" id="register" data-add-back-btn="true">
+    
+		<div data-role="header" data-position="fixed">
+            <h1>Register</h1>
+    	</div>
+        
+            <div data-role="content">
+            
+            <form action="" id="signupform">
+        
+        	<div data-role="fieldcontain">
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstname" value="" placeholder="Please place first name here" class="required"/>
+			</div>
+            
+            <div data-role="fieldcontain">
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" id="lastname" value="" placeholder="Please place last name here" class="required"/>
+			</div>
+            
+            <div data-role="fieldcontain">
+            	<label for="dropbox">State:</label>
+                <select name="state" id="usstate" data-native-menu="false" class="required">
+                <option placeholder="true" value>Please Select One</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        
+                </select>
+           </div>
+           
+           <div data-role="fieldcontain">
+            	<label for="email">Email Address:</label>
+        		<input type="email" name="email" id="email" value=""  class="required email" placeholder="example@email.com"/>
+            </div>
+            
+            <div data-role="fieldcontain">
+             	<input type="submit" value="Sign Up!" data-theme="a"/>
+                <input type="reset" value="Reset"  data-theme="b"/>
+            </div>
+            
+            </form>
+            </div>
+            
+<!-- Footer -->
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+	<div data-role="navbar">
+		<ul>
+			<li>
+			<a href="#home" data-transition="slide">Home</a>
+            </li>
+            <li>
+            <a href="#about" data-transition="slide">About</a>
+            </li>
+            <li>
+            <a href="#contact" data-transition="slide">Contact</a>
+            </li>
+        </ul>
+   </div>
+</div>
+
+</div>
+
+
+<!-- Log In -->
+
+<div data-role="page" id="login" data-add-back-btn="true">
+    
+		<div data-role="header" data-position="fixed">
+            <h1>Login</h1>
+    	</div>
+        
+        <div data-role="content" data-theme="a">
+    	
+        <form action="" id="loginForm">
+        
+        <div data-role="fieldcontain">
+            	<label for="email">Email Address:</label>
+        		<input type="email" name="email" id="email" value=""  class="required email" placeholder="example@email.com"/>
+        </div>
+            
+        <div data-role="fieldcontain">
+            	<label for="password">Password:</label>
+        		<input type="password" name="password" id="password" value=""  class="required password"/>
+        </div>
+            
+         <div data-role="fieldcontain">
+             	<input type="submit" value="Log In" data-theme="a"/>
+         </div>
+</form>
+
+</div>
+            
+<!-- Footer -->
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+	<div data-role="navbar">
+		<ul>
+			<li>
+			<a href="#home" data-transition="slide">Home</a>
+            </li>
+            <li>
+            <a href="#about" data-transition="slide">About</a>
+            </li>
+            <li>
+            <a href="#contact" data-transition="slide">Contact</a>
+            </li>
+        </ul>
+   </div>
+</div>
+
+</div>
+
+
+	<!-- Contact -->
+
+<div data-role="page" id="contact" data-add-back-btn="true">
+    
+		<div data-role="header" data-position="fixed">
+            <h1>Contact</h1>
+    	</div>
+        
+        <div data-role="content" data-theme="a">
+        <p>Rev-Auto is located at:<br>
+<br> 1001 4th Ave. S<br>
+		Clear Lake, IA 50428<br><br>
+Office Phone: 641-357-3577</p>
+        </div>
+            
+<div data-role="footer" data-position="fixed" data-theme="a">
+	<div data-role="navbar">
+		<ul>
+			<li>
+			<a href="#home" data-transition="slide">Home</a>
+            </li>
+            <li>
+            <a href="#about" data-transition="slide">About</a>
+            </li>
+            <li>
+            <a href="#contact" data-transition="slide">Contact</a>
+            </li>
+        </ul>
+   </div>
+</div>
+
+</div>
+
+    
+    
+    
+    
+    <!-- JavaScript -->
+	<script src="libs/jquery-2.0.3.min.js"></script>
+    <script src="libs/jquery.mobile-1.3.2.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+	</body>
 </html>
