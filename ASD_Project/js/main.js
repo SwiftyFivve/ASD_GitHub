@@ -8,30 +8,28 @@ $('#signupform').on("pageinit",function(){
 
 
 $('#submit').on('click', function(){
-	console.log(key);
+	console.log('Click Event works');
+
 function storeData(key){
-		//If there is no key this means this is a brand new item and we need a new key
-		console.log(key);
-		if($('key')){
-			var id			= Math.floor(Math.random()*10000001);
+		console.log('In Store Data');
+		 if($('#key').val() == ""){
+			var key	= Math.floor(Math.random()*10000001);
 		}else{
-			id = key;
+			var key = $('#key').val();
 		};
 		
 		var item				= {};
-			item.fname			=["First Name", ('#firstname').value];
+			item.fname			=["First Name", $('#firstname').value];
 			item.lname			=["Last Name", $('#lastname').value];
-			item.state			=["State", $('usstate').value];
-			item.email			=["Email", $('email').value];
+			item.state			=["State", $('#usstate').value];
+			item.email			=["Email", $('#email').value];
 			
-			console.log(key);
+			console.log('#key');
 			//Save Data into Local Storage:
-			localStorage.setItem(id, JSON.stringify(item));
-			alert("Goal Saved!");
+			localStorage.setItem(key, JSON.stringify(item));
 			window.reload(5);
 			
 		
-	
 }
 });
 
