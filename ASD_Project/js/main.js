@@ -8,8 +8,10 @@ $('#signupform').on("pageinit",function(){
 
 
 $('#submit').on('click', function(){
+	console.log(key);
 function storeData(key){
 		//If there is no key this means this is a brand new item and we need a new key
+		console.log(key);
 		if($('key')){
 			var id			= Math.floor(Math.random()*10000001);
 		}else{
@@ -22,7 +24,7 @@ function storeData(key){
 			item.state			=["State", $('usstate').value];
 			item.email			=["Email", $('email').value];
 			
-			
+			console.log(key);
 			//Save Data into Local Storage:
 			localStorage.setItem(id, JSON.stringify(item));
 			alert("Goal Saved!");
