@@ -80,23 +80,22 @@
             <h1>Register</h1>
     	</div>
         
-            <div data-role="content">
+            <div class="form" data-role="content">
             
             <form action="" id="signupform">
-        
-        	<div data-role="fieldcontain">
+            
+            <input id="key" type="hidden" value=""/>
+        	
                 <label for="firstname">First Name:</label>
-                <input type="text" name="firstname" id="firstname" value="" placeholder="Please place first name here" class="required"/>
-			</div>
-            
-            <div data-role="fieldcontain">
+                <input type="text" name="firstname" id="firstname" value="" placeholder="Please place first name here" class="input"/>
+		
+           
                 <label for="lastname">Last Name:</label>
-                <input type="text" name="lastname" id="lastname" value="" placeholder="Please place last name here" class="required"/>
-			</div>
+                <input type="text" name="lastname" id="lastname" value="" placeholder="Please place last name here" class="input"/>
+		
             
-            <div data-role="fieldcontain">
             	<label for="dropbox">State:</label>
-                <select name="state" id="usstate" data-native-menu="false" class="required">
+                <select name="state" id="usstate" data-native-menu="false" class="input">
                 <option placeholder="true" value>Please Select One</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -107,17 +106,13 @@
                         <option value="Connecticut">Connecticut</option>
                         
                 </select>
-           </div>
            
-           <div data-role="fieldcontain">
             	<label for="email">Email Address:</label>
-        		<input type="email" name="email" id="email" value=""  class="required email" placeholder="example@email.com"/>
-            </div>
+        		<input type="email" name="email" id="email" value=""  class="input" placeholder="example@email.com"/>
             
-            <div data-role="fieldcontain">
-             	<input type="submit" value="Sign Up!" data-theme="a"/>
+            
+             	<input id="submit" type="submit" value="Sign Up!" data-theme="a"/>
                 <input type="reset" value="Reset"  data-theme="b"/>
-            </div>
             
             </form>
             </div>
@@ -169,6 +164,8 @@
              	<input type="submit" value="Log In" data-theme="a"/>
          </div>
 </form>
+
+	<ul id="todos"></ul>
 
 </div>
             
