@@ -51,6 +51,8 @@
     </ul>
     
     <p>Rev-Auto's top goal is to find a car that is perfect for your life style. Whether your life consist of traveling for business, getting the family around or if it's your first car, we have the perfect fit for you! Come on in today!</p>
+    
+    
 
 
 <!-- Footer -->
@@ -111,11 +113,13 @@
         		<input type="email" name="email" id="email" value=""  class="input" placeholder="example@email.com"/>
             
             
-             	<input id="submit" type="submit" value="Sign Up!" data-theme="a"/>
+             	<a href="#review"><input id="submit" type="submit" value="Sign Up!" data-theme="a"/></a>
                 <input type="reset" value="Reset"  data-theme="b"/>
             
             </form>
             </div>
+            
+           <button type="button" id="display">Display info</button>
             
 <!-- Footer -->
 
@@ -137,6 +141,38 @@
 
 </div>
 
+
+<!--Review-->
+
+<div data-role="page" id="review" data-add-back-btn="true">
+    
+		<div data-role="header" data-position="fixed">
+            <h1>review</h1>
+    	</div>
+        
+        <div id="display">
+        	<ul></ul>
+        </div>
+
+<!-- Footer -->
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+	<div data-role="navbar">
+		<ul>
+			<li>
+			<a href="#home" data-transition="slide">Home</a>
+            </li>
+            <li>
+            <a href="#about" data-transition="slide">About</a>
+            </li>
+            <li>
+            <a href="#contact" data-transition="slide">Contact</a>
+            </li>
+        </ul>
+   </div>
+</div>
+
+</div>
 
 <!-- Log In -->
 
@@ -165,7 +201,6 @@
          </div>
 </form>
 
-	<ul id="todos"></ul>
 
 </div>
             
@@ -189,6 +224,22 @@
 
 </div>
 
+
+<!--Content Display page -->
+<div data-role="page" id="content" data-add-back-btn="true">
+    
+		<div data-role="header" data-position="fixed">
+            <h1>Confirm?
+            <img src="images/appLogo.png" id="logo" height="50px"></h1>
+    	</div>
+        
+        <div data-role="content" data-theme="a">
+        
+        <div id="display">
+        	<ul></ul>
+            
+            <span id="key"></span>
+        </div> 
 
 	<!-- Contact -->
 
