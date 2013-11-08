@@ -60,10 +60,40 @@ $('#submit').on('click', function(){
 			localStorage.setItem(key, JSON.stringify(item));
 			window.reload(5);
 			
-			console.log(localStorage.getItem(key));
-			console.log(localStorage.getItem(fname));
-		
-	var getData = function(){
+ 
+
+                
+});
+
+$('#content').on("pageinit",function(){
+	
+	
+	for(var i=0, len=localStorage.length; i<len; i++){
+		console.log(len);
+		var key = localStroage.key(i);
+		var value = localStorage.getItem(key);
+        var obj = JSON.parse(value);
+		console.log(obj);
+	};
+	console.log(obj);
+});
+	console.log(obj);	
+	
+	/*$("#display").empty();
+		for (var i = 0, j=localStorage.length; i<j; i++){
+			var key = localStorage.key(i);
+			var item = JSON.parse(localStorage.getItem(key));
+			console.log(item);
+			var makeSubList = $("<li></li>");
+			var makeSubLi = $("<h3>" +item.fname[1]+ " " + item.lname[1]"</h3>
+			" + "<p>" + item.state[1] + "</p>"
+			 + "<p>"+ item.email[1] + "</p>");
+			var makeLink = $("<a href='#' id='"+key+"'>Edit</a>");
+		});
+});
+	
+	
+	/*var getData = function(){
 		toggleControls("on");
 		if(localStorage.length === 0){
 			alert("There is no data in Local Storage, so default data was added.");
@@ -84,6 +114,6 @@ $('#submit').on('click', function(){
 		for(var i=0, len=localStorage.length; i<len; i++){
 			console.log(len);
 		};
-};
-});
+};*/
+
 
