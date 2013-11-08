@@ -22,15 +22,14 @@ var autoFillData = function (){
 			case "on":
 				$('#signupform').style.display = "none";
 				$('#clear').style.display =  "inline";
-				$('#displayLink').style.display = "none";
-				$('#addNew').style.display = "inline";
+				$('#review').style.display = "none";
+				
 				break
 			case "off":
 				$('#signupform').style.display = "block";
 				$('#clear').style.display =  "inline";
-				$('#displayLink').style.display = "inline";
-				$('#addNew').style.display = "none";
-				$('#items').style.display = "none";
+				$('#review').style.display = "inline";
+				
 				break;
 			default:
 				return false;	
@@ -43,11 +42,11 @@ var autoFillData = function (){
 $('#submit').on('click', function(){
 	console.log('Click Event works');
 
-		console.log('In Store Data');
+		console.log('In Store ');
 		 if($('#key').val() == ""){
-			var key	= Math.floor(Math.random()*10000001);
+			var id	= Math.floor(Math.random()*10000001);
 		}else{
-			var key = $('#key').val();
+			var id = $('#key').val();
 		};
 		
 		var item				= {};
@@ -57,7 +56,7 @@ $('#submit').on('click', function(){
 			item.email			=["Email", $('#email').val()];
 			
 			//Save Data into Local Storage:
-			localStorage.setItem(key, JSON.stringify(item));
+			localStorage.setItem(id, JSON.stringify(item));
 			window.reload(5);
 			
  
@@ -65,55 +64,80 @@ $('#submit').on('click', function(){
                 
 });
 
-$('#content').on("pageinit",function(){
-	
-	
-	for(var i=0, len=localStorage.length; i<len; i++){
-		console.log(len);
-		var key = localStroage.key(i);
-		var value = localStorage.getItem(key);
-        var obj = JSON.parse(value);
-		console.log(obj);
-	};
-	console.log(obj);
-});
-	console.log(obj);	
-	
-	/*$("#display").empty();
-		for (var i = 0, j=localStorage.length; i<j; i++){
-			var key = localStorage.key(i);
-			var item = JSON.parse(localStorage.getItem(key));
-			console.log(item);
-			var makeSubList = $("<li></li>");
-			var makeSubLi = $("<h3>" +item.fname[1]+ " " + item.lname[1]"</h3>
-			" + "<p>" + item.state[1] + "</p>"
-			 + "<p>"+ item.email[1] + "</p>");
-			var makeLink = $("<a href='#' id='"+key+"'>Edit</a>");
-		});
-});
-	
-	
-	/*var getData = function(){
-		toggleControls("on");
-		if(localStorage.length === 0){
-			alert("There is no data in Local Storage, so default data was added.");
-			console.log(getData);
-			autoFillData();
-
-		};
-		
-		$("#items").remove();
-		$("#display")
-			.html('div><ul></ul></div>')
+$('#review').on('pageinit',function(){
+	console.log('In page');
+	$("#items").remove();
+	$("#list")
+			.html('<div><ul></ul></div>')
 			.find("div:first")
-			.attr("id", "itms")
+			.attr("id", "items")
 			.css("display", "block")
 			.end()
 			.find("ul:first")
-			.attr("id", "itmesList");
-		for(var i=0, len=localStorage.length; i<len; i++){
-			console.log(len);
-		};
-};*/
+			.attr("id", "itemsList");
+	for(var i=0, len=localStorage.length; i<len; i++){
+		console.log(len);
+		$('<li><ul></ul></li>').appendTo("#itemsList");
+		 var key = localStorage.key(i);
+		 console.log(key);
+         var value = localStorage.getItem(key);
+         var obj = JSON.parse(value);
+		 console.log(value);
+		 console.log(obj);
+		 console.log(value[6]);
 
+$.each(obj, function(key, value){
+	console.log(value[0] + " " + value[1]);
+	 $("#itemsList li ul")
+         .eq(i)
+         .append('<li>' + value[0] + ': ' + value[1] + '</li>');
+	
+		});
+		
+$("<li><a href='#review' class='edit'>Edit Content</a><br><a href='#' class='delete'>Delete Content</a></li>")
+         .appendTo("#itemsList li ul li:last")
+         .attr("data-key", key);
+                                                                                                                                        
+	 }
+	 $(".edit").on("click", editItem);
+	 $(".delete").on("click", deleteItem);
+	
+	
+});
+
+
+var editKey = "";
+console.log(editKey);
+
+ 
+var  deleteItem = function (){
+	 var ask = confirm("Are you sure you want to delete this contact?");
+     if(ask){
+             localStorage.removeItem($(this).parent().attr("data-key"));
+             alert("Contact was deleted!");
+             window.location.reload();
+     }else{
+             alert("Contact was not deleted.");
+     }
+};
+ 		
+	
+var editItem = function(){
+                var key = $(this).parent().attr("data-key");
+                var value = localStorage.getItem(key);
+                console.log($(this).parent().attr("data-key"));
+				var item = JSON.parse(value);
+				toggleControls("off")
+				$('#firstname').val(item.fname[1]);
+				$('#lastname').val(item.lname[1]);
+				$('#usstate').val(item.state[1]);
+				$('#email').val(item.email[1]);
+				
+				
+				editKey = key;
+                $("#submit").data("key",editKey);
+                console.log($("#submit").data("key"));
+				
+				
+};
 
