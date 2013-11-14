@@ -123,9 +123,10 @@ var  deleteItem = function (){
  		
 	
 var editItem = function(){
-                var key = $(this).parent().attr("data-key");
+                var key = $(this).parent().attr.data(key);
+				console.log(key)
                 var value = localStorage.getItem(key);
-                console.log($(this).parent().attr("data-key"));
+                console.log(value);
 				var item = JSON.parse(value);
 				toggleControls("off")
 				$('#firstname').val(item.fname[1]);
