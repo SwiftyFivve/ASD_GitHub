@@ -2,7 +2,7 @@
 
 {
 
-	"Data":[
+	Data:[
             {
                     "First Name": "Jordan",
                     "Last Name": "Weaver",

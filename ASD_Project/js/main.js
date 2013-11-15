@@ -2,9 +2,54 @@
 
 //Jordan Weaver
 //ASD Week 2 11/13
+$(function(){	
+	$.ajax({
+		url: "xhr/data.xml",
+        type: "GET",
+        dataType: "xml",
+        success: function(result){
+        console.log(result);
+		}
+	});
+	});
+		
+	$(function(){			
+	$.ajax({
+		url: "xhr/json.js",
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+        console.log(result);
+		}
+	});	
+	});
 
 $('#signupform').on("pageinit",function(){
-	});		
+	
+	$(function(){	
+	$.ajax({
+		url: "xhr/data.xml",
+        type: "GET",
+        dataType: "xml",
+        success: function(result){
+        console.log(result);
+		}
+	});
+	});
+		
+	$(function(){			
+	$.ajax({
+		url: "xhr/json.js",
+        type: "GET",
+        dataType: "json",
+        cache: false,
+        success: function(result){
+        console.log(result);
+		}
+	});	
+	});
+					
+});		
 
 
 
@@ -20,23 +65,21 @@ var autoFillData = function (){
 	function toggleControls(n){
 		switch(n){
 			case "on":
-				$('#signupform').style.display = "none";
-				$('#clear').style.display =  "inline";
-				$('#review').style.display = "none";
+				$('#signupform').css('display', 'none');
+				$('#clear').css('display', 'inline');
+				$('#review').css('display', 'none');
 				
 				break
 			case "off":
-				$('#signupform').style.display = "block";
-				$('#clear').style.display =  "inline";
-				$('#review').style.display = "inline";
+				$('#signupform').css('display', 'block');
+				$('#clear').css('display', 'inline');
+				$('#review').css('display', 'inline');
 				
 				break;
 			default:
 				return false;	
 		}
 	}
-
-
 
 
 $('#submit').on('click', function(){
@@ -94,7 +137,7 @@ $.each(obj, function(key, value){
 	
 		});
 		
-$("<li><a href='#review' class='edit'>Edit Content</a><br><a href='#' class='delete'>Delete Content</a></li>")
+$("<li><a href='#' class='edit'>Edit Content</a><br><a href='#' class='delete'>Delete Content</a></li>")
          .appendTo("#itemsList li ul li:last")
          .attr("data-key", key);
                                                                                                                                         
@@ -123,8 +166,8 @@ var  deleteItem = function (){
  		
 	
 var editItem = function(){
-                var key = $(this).parent().attr.data(key);
-				console.log(key)
+                var key = $(this).parent().data('key');
+				console.log(key);
                 var value = localStorage.getItem(key);
                 console.log(value);
 				var item = JSON.parse(value);
@@ -135,10 +178,14 @@ var editItem = function(){
 				$('#email').val(item.email[1]);
 				
 				
+				
 				editKey = key;
                 $("#submit").data("key",editKey);
                 console.log($("#submit").data("key"));
 				
 				
 };
+                
+				
+
 
