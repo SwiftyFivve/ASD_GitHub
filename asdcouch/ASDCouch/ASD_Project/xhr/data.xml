@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemlist>
+	<signup>
+		<firstname>
+			<title>First Name</title>
+			<data>Jordan</data>
+		</firstname>
+		<lastname>
+			<title>Last Name</title>
+			<data>Weaver</data>
+		</lastname>
+		<state>
+			<title>State</title>
+			<data>Iowa</data>
+		</state>
+		<email>
+			<title>Email</title>
+			<data>jweav6@fullsail.edu</data>
+		</email>
+	</signup>
+	<signup>
+		<firstname>
+			<title>First Name</title>
+			<data>Adam</data>
+		</firstname>
+		<lastname>
+			<title>Last Name</title>
+			<data>Zwanzinger</data>
+		</lastname>
+		<state>
+			<title>State</title>
+			<data>Minnesota</data>
+		</state>
+		<email>
+			<title>Email</title>
+			<data>zwany86@hotmail.com</data>
+		</email>
+	</signup>
+	<signup>
+		<firstname>
+			<title>First Name</title>
+			<data>Jon</data>
+		</firstname>
+		<lastname>
+			<title>Last Name</title>
+			<data>Oval</data>
+		</lastname>
+		<state>
+			<title>State</title>
+			<data>Kansas</data>
+		</state>
+		<email>
+			<title>Email</title>
+			<data>donjon@gmail.com</data>
+		</email>
+	</signup>
+	<signup>
+		<firstname>
+			<title>First Name</title>
+			<data>Jesse</data>
+		</firstname>
+		<lastname>
+			<title>Last Name</title>
+			<data>Bruns</data>
+		</lastname>
+		<state>
+			<title>State</title>
+			<data>New York</data>
+		</state>
+		<email>
+			<title>Email</title>
+			<data>redheadtilldeath57@yahoo.com</data>
+		</email>
+	</signup>
+</itemlist>
