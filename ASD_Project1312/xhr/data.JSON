@@ -1,21 +1,20 @@
-Data:[
-            {
-                    "First Name": "Jordan",
-                    "Last Name": "Weaver",
-                    "State": "Minnesota",
-                    "Email": "jweav6@fullsail.edu"
-                    
-               },
-        
-            {
-                    "First Name": "Adam",
-                    "Last Name": "Zwanzinger",
-                    "State": "Iowa",
-                    "Email": "azinger@gmail.com"
-                    
-               }
-			   
-			]
+[
+
+	{
+	 "First Name": "Jordan",
+     "Last Name": "Weaver",
+     "State": "Minnesota",
+     "Email": "jweav6@fullsail.edu"
+     },
+     {
+     "First Name": "Adam",
+     "Last Name": "Zwanzinger",
+     "State": "Iowa",
+     "Email": "azinger@gmail.com"
+     }
+	 
+]
+		
 
 
 	
